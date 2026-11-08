@@ -23,8 +23,8 @@ const fromHardcoded = ({userID = '0', username}) => {
 
 const developers = [
     {
-        userID: '111812798',
-        username: 'Noahscratch493'
+        userID: '99843476',
+        username: 'CashAndTinley'
     }
 ].map(fromHardcoded);
 
