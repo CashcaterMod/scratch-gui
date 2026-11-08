@@ -136,13 +136,6 @@ const Footer = () => (
                         {/* Do not translate */}
                         {'CashMod Packager'}
                     </a>
-                    <a href="https://CashcaterMod.github.io">
-                        <FormattedMessage
-                            defaultMessage="Homepage"
-                            description="Go to the homepage"
-                            id="tw.footer.embed"
-                        />
-                    </a>
                     <a href="https://CashcaterMod.github.io/scratch2">
                         <FormattedMessage
                             defaultMessage="Scratch 2 Legacy"
