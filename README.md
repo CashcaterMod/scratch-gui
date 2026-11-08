@@ -1,4 +1,4 @@
-scratch-gui modified for use in [TurboWarp](https://turbowarp.org/) then for [ScratchCEReborn](https://scratch-community-edition-reborn.github.io/ScratchCEReborn/)
+scratch-gui modified for use in [TurboWarp](https://turbowarp.org/) then for [CattyMod](https://cattymod.app/) and then for [ScratchCEReborn](https://scratch-community-edition-reborn.github.io/ScratchCEReborn/)
 
 ## Setup
 
