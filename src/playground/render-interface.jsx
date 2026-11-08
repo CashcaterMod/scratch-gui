@@ -89,7 +89,7 @@ const Footer = () => (
                 <FormattedMessage
                     // eslint-disable-next-line max-len
                     defaultMessage="{APP_NAME} is not affiliated with Scratch, the Scratch Team, or the Scratch Foundation."
-                    description="Disclaimer that CattyMod is not connected to Scratch"
+                    description="Disclaimer that CashMod is not connected to Scratch"
                     id="tw.footer.disclaimer"
                     values={{
                         APP_NAME
@@ -128,45 +128,45 @@ const Footer = () => (
                     </a>
                 </div>
                 <div className={styles.footerSection}>
-                    <a href="https://studio.cattymod.app/#1334179304">
+                    <a href="https://CashcaterMod.github.io/scratch-gui/#1334179304">
                         {/* Do not translate */}
                         {'Idea Generator'}
                     </a>
-                    <a href="https:/cattymod.app/packager">
+                    <a href="https:/CashcaterMod.github.io/packager">
                         {/* Do not translate */}
-                        {'CattyMod Packager'}
+                        {'CashMod Packager'}
                     </a>
-                    <a href="https://cattymod.app">
+                    <a href="https://CashcaterMod.github.io">
                         <FormattedMessage
                             defaultMessage="Homepage"
                             description="Go to the homepage"
                             id="tw.footer.embed"
                         />
                     </a>
-                    <a href="https://scratch2.cattymod.app">
+                    <a href="https://CashcaterMod.github.io/scratch2">
                         <FormattedMessage
                             defaultMessage="Scratch 2 Legacy"
                             description="Run Scratch 2 anytime, anywhere!"
                             id="tw.footer.parameters"
                         />
                     </a>
-                    <a href="https://cattymod.app/desktop">
+                    <a href="https://CashcaterMod.github.io/desktop">
                         <FormattedMessage
                             defaultMessage="Desktop"
-                            description="Run CattyMod Offline"
+                            description="Run CashMod Offline"
                             id="tw.footer.documentation"
                         />
                     </a>
                 </div>
                 <div className={styles.footerSection}>
-                    <a href="https://scratch.mit.edu/users/Noahscratch493/#comments">
+                    <a href="https://scratch.mit.edu/users/CashAndTinley/#comments">
                         <FormattedMessage
                             defaultMessage="Feedback & Bugs"
                             description="Link to feedback/bugs page"
                             id="tw.feedback"
                         />
                     </a>
-                    <a href="https://github.com/CattyMod/">
+                    <a href="https://github.com/CashcaterMod/">
                         <FormattedMessage
                             defaultMessage="Source Code"
                             description="Link to source code"
