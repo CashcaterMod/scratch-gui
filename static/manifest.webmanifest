@@ -1,6 +1,6 @@
 {
-  "short_name": "CattyMod",
-  "name": "CattyMod",
+  "short_name": "CashMod",
+  "name": "CashMod",
   "description": "Run Scratch projects faster",
   "icons": [
     {
@@ -14,7 +14,7 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": "https://studio.cattymod.app",
+  "start_url": "https://https://cashcatermod.github.io/scratch-gui/",
   "background_color": "#333333",
   "display": "standalone",
   "theme_color": "#333333"
