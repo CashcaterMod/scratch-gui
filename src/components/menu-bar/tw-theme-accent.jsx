@@ -1,62 +1,119 @@
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {FormattedMessage, defineMessages} from 'react-intl';
+import {FormattedMessage} from 'react-intl';
 import {connect} from 'react-redux';
 
 import check from './check.svg';
 import dropdownCaret from './dropdown-caret.svg';
+import rainbowIcon from './tw-accent-rainbow.svg';
+
 import {MenuItem, Submenu} from '../menu/menu.jsx';
-import {ACCENT_BLUE, ACCENT_MAP, ACCENT_PURPLE, ACCENT_RED, ACCENT_RAINBOW, Theme} from '../../lib/themes/index.js';
-import {openAccentMenu, accentMenuOpen, closeSettingsMenu} from '../../reducers/menus.js';
+
+import {
+    ACCENT_MAP,
+    Theme
+} from '../../lib/themes/index.js';
+
+import {
+    openAccentMenu,
+    accentMenuOpen,
+    closeSettingsMenu
+} from '../../reducers/menus.js';
+
 import {setTheme} from '../../reducers/theme.js';
 import {persistTheme} from '../../lib/themes/themePersistance.js';
-import rainbowIcon from './tw-accent-rainbow.svg';
+
 import styles from './settings-menu.css';
 
-const options = defineMessages({
-    [ACCENT_RED]: {
+
+// 🌈 ORDER CONTROL (this is the important part)
+const ACCENT_ORDER = [
+    'red',
+    'orange',
+    'yellow',
+    'green',
+    'blue',
+    'indigo',
+    'violet',
+    'purple',
+    'rainbow'
+];
+
+
+// 🌈 Labels
+const ACCENT_LABELS = {
+    red: {
         defaultMessage: 'Red',
-        description: 'Name of the red color scheme, used by TurboWarp by default.',
+        description: 'Red accent theme',
         id: 'tw.accent.red'
     },
-    [ACCENT_PURPLE]: {
-        defaultMessage: 'Purple',
-        description: 'Name of the purple color scheme. Matches modern Scratch.',
-        id: 'tw.accent.purple'
+    orange: {
+        defaultMessage: 'Orange',
+        description: 'Orange accent theme',
+        id: 'tw.accent.orange'
     },
-    [ACCENT_BLUE]: {
+    yellow: {
+        defaultMessage: 'Yellow',
+        description: 'Yellow accent theme',
+        id: 'tw.accent.yellow'
+    },
+    green: {
+        defaultMessage: 'Green',
+        description: 'Green accent theme',
+        id: 'tw.accent.green'
+    },
+    blue: {
         defaultMessage: 'Blue',
-        description: 'Name of the blue color scheme. Matches Scratch before the high contrast update.',
+        description: 'Blue accent theme',
         id: 'tw.accent.blue'
     },
-    [ACCENT_RAINBOW]: {
+    indigo: {
+        defaultMessage: 'Indigo',
+        description: 'Indigo accent theme',
+        id: 'tw.accent.indigo'
+    },
+    violet: {
+        defaultMessage: 'Violet',
+        description: 'Violet accent theme',
+        id: 'tw.accent.violet'
+    },
+    purple: {
+        defaultMessage: 'Purple',
+        description: 'Purple accent theme',
+        id: 'tw.accent.purple'
+    },
+    rainbow: {
         defaultMessage: 'Rainbow',
-        description: 'Name of color scheme that uses a rainbow.',
+        description: 'Rainbow accent theme',
         id: 'tw.accent.rainbow'
     }
-});
-
-const icons = {
-    [ACCENT_RAINBOW]: rainbowIcon
 };
 
+
+// Icons
+const icons = {
+    rainbow: rainbowIcon
+};
+
+
+// 🎨 Color icon
 const ColorIcon = props => (
     icons[props.id] ? (
         <img
             className={styles.accentIconOuter}
             src={icons[props.id]}
             draggable={false}
-            // Image is decorative
             alt=""
         />
     ) : (
         <div
             className={styles.accentIconOuter}
             style={{
-                // menu-bar-background is var(...), don't want to evaluate with the current values
-                backgroundColor: ACCENT_MAP[props.id].guiColors['looks-secondary'],
-                backgroundImage: ACCENT_MAP[props.id].guiColors['menu-bar-background-image']
+                backgroundColor:
+                    ACCENT_MAP[props.id]?.guiColors?.['looks-secondary'] || '#999',
+                backgroundImage:
+                    ACCENT_MAP[props.id]?.guiColors?.['menu-bar-background-image']
             }}
         />
     )
@@ -66,18 +123,25 @@ ColorIcon.propTypes = {
     id: PropTypes.string
 };
 
+
+// 🧩 Menu item
 const AccentMenuItem = props => (
     <MenuItem onClick={props.onClick}>
         <div className={styles.option}>
             <img
-                className={classNames(styles.check, {[styles.selected]: props.isSelected})}
+                className={classNames(styles.check, {
+                    [styles.selected]: props.isSelected
+                })}
                 width={15}
                 height={12}
                 src={check}
                 draggable={false}
+                alt=""
             />
+
             <ColorIcon id={props.id} />
-            <FormattedMessage {...options[props.id]} />
+
+            <FormattedMessage {...ACCENT_LABELS[props.id]} />
         </div>
     </MenuItem>
 );
@@ -88,6 +152,8 @@ AccentMenuItem.propTypes = {
     onClick: PropTypes.func
 };
 
+
+// 📌 Main menu
 const AccentThemeMenu = ({
     isOpen,
     isRtl,
@@ -101,41 +167,42 @@ const AccentThemeMenu = ({
             onClick={onOpen}
         >
             <ColorIcon id={theme.accent} />
+
             <span className={styles.submenuLabel}>
                 <FormattedMessage
                     defaultMessage="Accent"
-                    description="Label for menu to choose accent color (eg. TurboWarp's red, Scratch's purple)"
+                    description="Label for accent theme menu"
                     id="tw.menuBar.accent"
                 />
             </span>
+
             <img
                 className={styles.expandCaret}
                 src={dropdownCaret}
                 draggable={false}
+                alt=""
             />
         </div>
+
         <Submenu place={isRtl ? 'left' : 'right'}>
-            {Object.keys(options).map(item => (
-                <AccentMenuItem
-                    key={item}
-                    id={item}
-                    isSelected={theme.accent === item}
-                    // eslint-disable-next-line react/jsx-no-bind
-                    onClick={() => onChangeTheme(theme.set('accent', item))}
-                />
-            ))}
+            {ACCENT_ORDER
+                .filter(id => ACCENT_MAP[id])
+                .map(item => (
+                    <AccentMenuItem
+                        key={item}
+                        id={item}
+                        isSelected={theme.accent === item}
+                        onClick={() =>
+                            onChangeTheme(theme.set('accent', item))
+                        }
+                    />
+                ))}
         </Submenu>
     </MenuItem>
 );
 
-AccentThemeMenu.propTypes = {
-    isOpen: PropTypes.bool,
-    isRtl: PropTypes.bool,
-    onChangeTheme: PropTypes.func,
-    onOpen: PropTypes.func,
-    theme: PropTypes.instanceOf(Theme)
-};
 
+// Redux
 const mapStateToProps = state => ({
     isOpen: accentMenuOpen(state),
     isRtl: state.locales.isRtl,

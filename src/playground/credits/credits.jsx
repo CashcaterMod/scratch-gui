@@ -74,9 +74,12 @@ const Credits = () => (
         {APP_NAME !== 'TurboWarp' && (
             // Be kind and considerate. Don't remove this :)
             <section>
-                <h2>TurboWarp</h2>
+                <h2>Forks, Code Usage and Assets</h2>
                 <p>
                     {APP_NAME} is based on <a href="https://turbowarp.org/">TurboWarp</a>.
+                </p>
+                <p>
+                    Scratch Paint is forked from <a href="https://warp.mistium.com/">MistWarp</a> which is also where the extension icon is from.
                 </p>
             </section>
         )}
@@ -94,7 +97,7 @@ const Credits = () => (
         </section>
 
         <section>
-            <h2>TurboWarp's Contributors</h2>
+            <h2>Contributors</h2>
             <UserList users={UserData.contributors} />
         </section>
 
