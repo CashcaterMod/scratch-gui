@@ -1,5 +1,7 @@
 scratch-gui modified for use in [TurboWarp](https://turbowarp.org/) then for [CattyMod](https://cattymod.app/) and then for [CashMod](https://CashcaterMod.github.io/scratch-gui/)
 
+CashMod Was previously known as Scratch Community Edition Reborn. 
+
 ## Setup
 
 See https://docs.turbowarp.org/development/getting-started to setup the complete environment.
