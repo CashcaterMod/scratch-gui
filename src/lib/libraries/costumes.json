@@ -2603,64 +2603,52 @@
         "rotationCenterY": 200
     },
     {
-        "name": "Dango Emoji",
-        "tags": [
-            "food"
-        ],
-        "assetId": "b4ab6b3b69de1bc3ed6a94ace172a0b0",
-        "bitmapResolution": 1,
-        "dataFormat": "svg",
-        "md5ext": "b4ab6b3b69de1bc3ed6a94ace172a0b0.svg",
-        "rotationCenterX": 44,
-        "rotationCenterY": 44
-    },
-    {
-        "name": "Dango-a",
+        "name": "Cashcat-A",
         "tags": [
             "animals"
         ],
-        "assetId": "54340d031038257da843a92a9709edea",
+        "assetId": "02c45586b0f536bc03946efd96811710",
         "bitmapResolution": 1,
         "dataFormat": "svg",
-        "md5ext": "54340d031038257da843a92a9709edea.svg",
-        "rotationCenterX": 30.74937811242981,
-        "rotationCenterY": 44.1730748476198
+        "md5ext": "02c45586b0f536bc03946efd96811710.svg",
+        "rotationCenterX": 48.20865451049093,
+        "rotationCenterY": 49.61842392978434
     },
     {
-        "name": "Dango-b",
+        "name": "Cashcat-b",
         "tags": [
             "animals"
         ],
-        "assetId": "aaeabac240d068893ffc007b1a3e29c4",
+        "assetId": "525cdb5a3611f6f3193d00eecc23ac6c",
         "bitmapResolution": 1,
         "dataFormat": "svg",
-        "md5ext": "aaeabac240d068893ffc007b1a3e29c4.svg",
-        "rotationCenterX": 32.081095272904946,
-        "rotationCenterY": 52.73103417165271
+        "md5ext": "525cdb5a3611f6f3193d00eecc23ac6c.svg",
+        "rotationCenterX": 46.13260050470947,
+        "rotationCenterY": 52.47137328327085
     },
     {
-        "name": "Dango-c",
+        "name": "Cashcat-c",
         "tags": [
             "animals"
         ],
-        "assetId": "6762e34d001304dd6e6a24dee91b86bd",
+        "assetId": "02b122165789a6efa76cdada25ac3ca7",
         "bitmapResolution": 1,
         "dataFormat": "svg",
-        "md5ext": "6762e34d001304dd6e6a24dee91b86bd.svg",
-        "rotationCenterX": 30.720929056214914,
-        "rotationCenterY": 44.17307742380987
+        "md5ext": "02b122165789a6efa76cdada25ac3ca7.svg",
+        "rotationCenterX": 55.236973531630355,
+        "rotationCenterY": 29.39192934651217
     },
     {
-        "name": "Dango-d",
+        "name": "Cashcat-d",
         "tags": [
             "animals"
         ],
-        "assetId": "9dd36d03acb6f3842d0e82fb03ad7d1a",
+        "assetId": "b314097dd41ada7569ef71a6eb506fdb",
         "bitmapResolution": 1,
         "dataFormat": "svg",
-        "md5ext": "9dd36d03acb6f3842d0e82fb03ad7d1a.svg",
-        "rotationCenterX": 62.30316965465545,
-        "rotationCenterY": 60.53499922681809
+        "md5ext": "b314097dd41ada7569ef71a6eb506fdb.svg",
+        "rotationCenterX": 48.44891835577772,
+        "rotationCenterY": 41.58621179650788
     },
     {
         "name": "Dani-a",
