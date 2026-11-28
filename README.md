@@ -1,3 +1,5 @@
+NOTE: This is a older version of TartarusMod AND IS NO LONGER MAINTAINED. If you want a better Scratch Mod, I suggest using TartarusMod's newest version.
+
 scratch-gui modified for use in [TurboWarp](https://turbowarp.org/) then for [CattyMod](https://cattymod.app/) and then for [CashMod](https://CashcaterMod.github.io/scratch-gui/)
 
 CashMod Was previously known as Scratch Community Edition Reborn. 
